@@ -1,0 +1,27 @@
+.pfp {
+  padding-top: 60px;
+}
+
+.pfp__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 24px;
+}
+
+.pfp .pf__filters {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .pfp {
+    padding-top: 40px;
+  }
+
+  .pfp__title {
+    font-size: 24px;
+  }
+}

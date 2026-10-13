@@ -1,0 +1,45 @@
+.rv {
+  opacity: 0;
+}
+
+.rv-left  { translate: -60px 0; }
+.rv-right { translate: 60px 0; }
+.rv-up    { translate: 0 50px; }
+.rv-down  { translate: 0 -50px; }
+
+.rv.is-visible {
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation-delay: var(--rv-delay, 0ms);
+  animation-fill-mode: both;
+}
+
+.rv-left.is-visible  { animation-name: rv-left; }
+.rv-right.is-visible { animation-name: rv-right; }
+.rv-up.is-visible    { animation-name: rv-up; }
+.rv-down.is-visible  { animation-name: rv-down; }
+
+@keyframes rv-left  { from { opacity: 0; translate: -60px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes rv-right { from { opacity: 0; translate: 60px 0; }  to { opacity: 1; translate: 0 0; } }
+@keyframes rv-up    { from { opacity: 0; translate: 0 50px; }  to { opacity: 1; translate: 0 0; } }
+@keyframes rv-down  { from { opacity: 0; translate: 0 -50px; } to { opacity: 1; translate: 0 0; } }
+
+/* side se aate elements se horizontal scrollbar na aaye */
+.svc-hero,
+.svc-why,
+.svc-cta,
+.sd-enquiry,
+.sd-block {
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv {
+    opacity: 1;
+    translate: none;
+  }
+
+  .rv.is-visible {
+    animation: none;
+  }
+}

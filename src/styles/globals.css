@@ -1,0 +1,115 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page-wrapper {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* =========================
+   TOP MARQUEE BAR
+========================= */
+
+.topbar {
+  width: 100%;
+  height: 46px;
+  overflow: hidden;
+  background: #050505;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.topbar-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.topbar-content span {
+  margin: 0 22px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .topbar {
+    height: 34px;
+  }
+
+  .topbar-content span {
+    margin: 0 15px;
+    font-size: 11px;
+  }
+
+  .topbar-track {
+    animation-duration: 18s;
+  }
+}
+/* Scrollbar hide - Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbar hide - Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Scrollbar hide - IE, old Edge */
+body {
+  -ms-overflow-style: none;
+}
+/* ===== Scroll reveal (data-reveal) ===== */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+[data-reveal="up"]    { translate: 0 40px; }
+[data-reveal="down"]  { translate: 0 -40px; }
+[data-reveal="left"]  { translate: -60px 0; }
+[data-reveal="right"] { translate: 60px 0; }
+
+[data-reveal].is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* jinhe animation pasand nahi (accessibility) unke liye band */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; translate: none; transition: none; }
+}

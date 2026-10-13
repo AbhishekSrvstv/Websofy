@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-custom {
+  max-width: 1140px;   /* sabki width same */
+  margin: 0 auto;      /* center me */
+  padding: 0 16px;     /* side gap */
+}
+
+.section {
+  padding: 60px 0;     /* upar-niche same spacing */
+}
+
+.section-alt {
+  background: #f8fafc; /* alternate light background */
+}

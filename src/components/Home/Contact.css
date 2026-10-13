@@ -1,0 +1,342 @@
+.contact-section {
+  width: 100%;
+  padding: 80px 35px;
+  background: #ffffff;
+  margin-top: -100px;
+}
+
+/* Header */
+.contact-header {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+.contact-tag {
+  display: inline-block;
+  color: #8bc63f;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+.contact-header h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+.contact-header .highlight {
+  color: #8bc63f;
+}
+.contact-header p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* Container */
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* Cards */
+.contact-info-card,
+.contact-form-card {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top line - hover par slide-in hoti hai */
+.contact-info-card::before,
+.contact-form-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: #8bc63f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+.contact-info-card:hover::before,
+.contact-form-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  background: rgba(139, 198, 63, 0.12);
+  color: #4a9c1e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+/* Card Headings */
+.contact-info-card h3,
+.contact-form-card h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+.contact-info-card h3 .highlight,
+.contact-form-card h3 .highlight {
+  color: #8bc63f;
+}
+
+/* Description */
+.info-desc,
+.form-subtext {
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.info-desc strong {
+  color: #333;
+}
+
+/* Info Items */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.info-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 198, 63, 0.12);
+  color: #8bc63f;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+.info-item:hover .info-icon {
+  background: #8bc63f;
+  color: #ffffff;
+  transform: rotate(8deg) scale(1.08);
+}
+.info-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.info-item p {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Form */
+.form-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full-width {
+  margin-bottom: 18px;
+}
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8bc63f;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+.message-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.char-count {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* Captcha */
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.captcha-box {
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #333;
+  text-decoration: line-through;
+  font-style: italic;
+}
+.captcha-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.captcha-btn:hover {
+  background: #f5f5f5;
+}
+.captcha-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  outline: none;
+}
+.captcha-input:focus {
+  border-color: #8bc63f;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: #8bc63f;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.25s ease;
+}
+.submit-btn:hover {
+  background: #76ad32;
+}
+
+/* Large Tablet */
+@media (max-width: 1100px) {
+  .contact-container {
+    gap: 18px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 28px;
+  }
+  .contact-info-card h3,
+  .contact-form-card h3 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info-card h3,
+  .contact-form-card h3 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 50px 20px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 22px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .captcha-row {
+    flex-wrap: wrap;
+  }
+  .captcha-input {
+    flex: 1 1 100%;
+  }
+  .contact-info-card h3,
+  .contact-form-card h3 {
+    font-size: 1.55rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 40px 16px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 18px;
+  }
+  .contact-info-card h3,
+  .contact-form-card h3 {
+    font-size: 1.35rem;
+  }
+  .info-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+  .captcha-box {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

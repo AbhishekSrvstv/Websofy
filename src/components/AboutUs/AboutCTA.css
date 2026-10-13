@@ -1,0 +1,96 @@
+.acta {
+  padding: 10px 3% 90px;     /* pehle 40px 3% -> upar kam, neeche zyada */
+  margin-top: -30px;         /* card ko Technology section ki taraf kheenchta hai */
+  background: #f8fafc;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.acta__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 62px 74px;
+  background: #69c245;
+  border-radius: 29px;
+  box-shadow: 0 16px 36px rgba(105, 194, 69, 0.24);
+}
+
+.acta__text {
+  max-width: 920px;
+}
+
+/* LET'S WORK TOGETHER pill */
+.acta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 19px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.acta__badge i {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.acta__text h2 {
+  margin: 19px 0 18px;
+  color: #fff;
+  font-size: clamp(2rem, 3.6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.8px;
+}
+
+.acta__text p {
+  max-width: 750px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+/* white button */
+.acta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 20px 33px;
+  background: #fff;
+  color: #4caf32;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 15px;
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.acta__btn svg {
+  transition: transform 0.3s ease;
+}
+.acta__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 28px rgba(0, 0, 0, 0.18);
+}
+.acta__btn:hover svg {
+  transform: translateX(6px);
+}
+
+@media (max-width: 900px) {
+  .acta__card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 26px;
+  }
+}

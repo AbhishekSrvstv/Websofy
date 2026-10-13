@@ -1,0 +1,77 @@
+.map-section {
+  width: 100%;
+  padding: 0 35px 80px;
+  margin-top: -30px;
+  line-height: 0;
+}
+.map-frame {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  height: 250px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 16px;
+}
+/* Tablet */
+@media (max-width: 900px) {
+  .map-section {
+    padding: 0 25px 60px;
+  }
+  .map-frame {
+    height: 380px;
+  }
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .map-section {
+    padding: 0 20px 50px;
+  }
+  .map-frame {
+    height: 300px;
+    border-radius: 12px;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: #080a09;
+  color: #ffffff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(139, 198, 63, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, visibility 0.3s ease;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: #76ad32;
+  transform: translateY(-4px);
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.1rem;
+  }
+}
