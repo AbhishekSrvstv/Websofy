@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./AboutHero.css";
-import officeImg from "../../assets/About_Img/AboutUs.jpg";
+import officeImg from "../../assets/About_Img/AboutUS.jpg";
 
 export default function AboutHero() {
   return (
